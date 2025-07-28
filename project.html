@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="bar" onclick="openBtn()"><i class="fa-solid fa-bars"></i></div>
+
+    <ul class="close-nav">
+      <div class="close-btn" onclick="closeBtn()">
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="hover">
+        <a class="hide">My Projects</a>
+        <ul class="dropdown">
+          <li><a href="game.html">Game</a></li>
+          <li><a href="">Calculator</a></li>
+          <li><a href="circle.html">Animations</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="author">FALCDEV</div>
+    <h1 id="project">Projects</h1>
+    <div class="wraper">
+      <div
+        class="projects position1"
+        onclick="window.location.href='game.html'"
+      >
+        <h2>Project no.1: classic Rock, paper, scissors game.</h2>
+        <p>
+          A digital version of the classic Rock Paper Scissors game, which will
+          make your free time enjoyable.
+        </p>
+      </div>
+
+      <div class="projects position2" onclick="window.location.href=''">
+        <h2>Project no.2: Calculator.</h2>
+        <p>A functional calculator built using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div
+        class="projects position3"
+        onclick="window.location.href='slider.html'"
+      >
+        <h2>Project no.2: CSS Animation's</h2>
+        <p>
+          Some beautiful animations created using only CSS, which will add life
+          to your website
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Let's build something together</h2>
+      <button>Contact me</button>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

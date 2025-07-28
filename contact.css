@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-nav {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.close-nav li {
+  margin-left: 50px;
+  font-size: 25px;
+  color: #000;
+}
+
+li a {
+  color: #000;
+  font-size: 20px;
+}
+
+li a:hover {
+  color: blue;
+}
+
+.hover {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s linear;
+  list-style: none;
+  height: 210px;
+  width: 200px;
+  background: linear-gradient(180deg, seagreen, yellowgreen, blanchedalmond);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown li {
+  height: 70px;
+  width: 200px;
+  margin: 0;
+  text-align: end;
+  border-radius: 10px;
+  padding-top: 10px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.dropdown li a {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.hover:hover .dropdown {
+  transform: scaleY(1);
+}
+
+.close-btn,
+.bar {
+  display: none;
+}
+
+.author {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 180px;
+  font-size: 4vw;
+  background: transparent;
+  background: linear-gradient(to right, blue, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 600px;
+  width: 80vw;
+  background: #eaeaff;
+  border-radius: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope {
+  font-size: 30px;
+  background: linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  background: linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-bx {
+  height: 70px;
+  color: black;
+  width: 50%;
+  border-radius: 10px;
+}
+
+input {
+  height: 100%;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: #8098ff;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+
+.input-bx:hover input {
+  border: 2px solid #8098ffb9;
+}
+.input-bx:hover ::placeholder {
+  transform: translateY(-15px);
+
+  opacity: 2;
+}
+
+textarea {
+  width: 50%;
+  padding-top: 15px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+textarea:hover {
+  border: 2px solid #8098ffb9;
+}
+
+button {
+  height: 50px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  background: #1523ffb4;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: #1523ff;
+}
+
+/*adding project page css*/
+#project {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.wraper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.projects {
+  height: 400px;
+  width: 300px;
+  display: Flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(30deg, blue, red);
+  margin: 30px;
+  word-wrap: wrap;
+  padding: 20px;
+
+  gap: 30px;
+
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px 6px #431116d9;
+
+  color: white;
+}
+
+.projects h2,
+p {
+  text-align: center;
+}
+
+.content {
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  word-wrap: wrap;
+  color: white;
+  background: linear-gradient(45deg, red, blue);
+  gap: 30px;
+}
+
+.content h2 {
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.content button {
+  height: 60px;
+  width: 180px;
+  background: transparent;
+  border: 1px solid #fff;
+  font-size: 20px;
+  outline: none;
+}
+
+/*breackpoint*/
+@media screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .close-nav {
+    height: 100vh;
+    width: 0;
+    border-radius: 15px 0 0 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: linear-gradient(180deg, seagreen, yellowgreen, blanchedalmond);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    overflow: hidden;
+  }
+
+  .close-nav li {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid white;
+    padding: 10px 30px 5px 20px;
+    font-size: 25px;
+    text-align: end;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+  }
+  .close-btn {
+    display: block;
+    height: 40px;
+    width: 30px;
+    font-size: 25px;
+
+    font-weight: 600;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 1000;
+  }
+
+  #close-btn {
+    transition: transform 0.5s linear;
+  }
+
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    width: 250px;
+    transform: scale(0);
+    transform-origin: top;
+    background: transparent;
+    transition: all 0.3s linear;
+  }
+
+  .hover:hover .dropdown {
+    height: 54vh;
+    transform: scale(1);
+  }
+
+  .bar {
+    display: block;
+    height: 40px;
+    width: 30px;
+    font-size: 25px;
+
+    font-weight: 600;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  .bar i {
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .close-btn i {
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .author {
+    top: 10px;
+    left: 30px;
+    font-size: 7vw;
+  }
+
+  .input-bx {
+    width: 90%;
+    height: 50px;
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+  }
+  .wraper {
+    flex-direction: column;
+  }
+}

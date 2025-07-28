@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="circle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="home.html" title="Go to Home"
+        ><i class="fa-solid fa-house"></i><span class="sr-only">Home</span></a
+      >
+      <div class="author">FALCDEV</div>
+    </nav>
+    <div class="banner">
+      <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1">
+          <img src="image/bird1.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="image/bird2.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="image/bird3.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="image/bird4.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="image/bird5.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="image/bird6.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="image/bird7.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="image/bird8.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="image/bird9.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="image/bird10.jpg" alt="" />
+        </div>
+      </div>
+
+      <button
+        onclick="
+      slider.style.animationPlayState = 'running';
+      "
+      >
+        Play Animation
+      </button>
+
+      <button
+        onclick="
+      slider.style.animationPlayState = 'paused';
+      "
+      >
+        Pause Animation
+      </button>
+    </div>
+
+    <script>
+      const slider = document.querySelector(".banner .slider");
+    </script>
+  </body>
+</html>

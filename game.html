@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+
+    <link rel="stylesheet" href="game.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" title="Go to Home"
+        ><i class="fa-solid fa-house"></i><span class="sr-only">Home</span></a
+      >
+      <div class="author">FALCDEV</div>
+    </nav>
+
+    <video autoplay muted loop id="bg-video">
+      <source src="game.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <h1>Rock Paper Scissors</h1>
+    <div class="wrapper">
+      <div class="choices">
+        <div class="choice" id="rock">
+          <img
+            src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/377919868/original/dc304b7ac3a8bb05896b3c5f648d6025f2e9a2a2/design-a-realtor-luxury-property-3d-logo-real-estate.jpg"
+            alt=""
+          />
+        </div>
+        <div class="choice" id="paper">
+          <img
+            src="https://static.wixstatic.com/media/382f46_27d729e938484e6fb90a6d217b1aae11~mv2.png/v1/fill/w_256,h_256,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201SENSORY_edited.png"
+            alt=""
+          />
+        </div>
+        <div class="choice" id="scissor">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQhOepNss8f6cVy5VrJcS15kgO797pUKFqTXH2av-6F9iAyFW-5"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="score-bord">
+        <div class="score">
+          <p id="user-score">0</p>
+          <p>You</p>
+        </div>
+        <div class="score">
+          <p id="comp-score">0</p>
+          <p>Comp</p>
+        </div>
+      </div>
+      <div class="msg-container">
+        <p id="msg">Play your move</p>
+      </div>
+      <button
+        id="reset"
+        onclick="resetGame(() =>{
+        console.log('Game reset');
+      })"
+      >
+        Reset
+      </button>
+    </div>
+    <script src="game.js"></script>
+    <script src="logreg.js"></script>
+     
+    </script>
+  </body>
+</html>

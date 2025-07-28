@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Register</title>
+
+    <link rel="stylesheet" href="logreg.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+  </head>
+  <body>
+    <div class="bar"><i class="fa-solid fa-bars"></i></div>
+
+    <nav class="nav">
+      <i class="fa-solid fa-xmark" id="close-nav"></i>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li><a onclick="logregister()">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="log-container">
+        <div class="author">FALCDEV</div>
+        <div class="log-register">
+          <span class="material-symbols-outlined" onclick="clsbtn()">
+            close
+          </span>
+          <form id="login-form">
+            <h1>Log-in</h1>
+
+            <div class="input-box">
+              <input type="text" placeholder="Username" id="l-username" />
+            </div>
+
+            <div class="input-box">
+              <input type="password" placeholder="password" id="l-password" />
+            </div>
+            <button type="button" class="log-btn" onclick="loginS()">
+              Login
+            </button>
+            <p class="message" id="l-message"></p>
+            <div class="register-link">
+              <p>don't have account?</p>
+              <a onclick="register()">register</a>
+            </div>
+          </form>
+
+          <form1 id="register-form">
+            <h1>Register</h1>
+            <div class="input-box">
+              <input type="text" placeholder="username" id="r-username" />
+            </div>
+
+            <div class="input-box">
+              <input type="email" placeholder="Email" id="r-email" />
+            </div>
+
+            <div class="input-box">
+              <input type="password" placeholder="password" id="r-password" />
+            </div>
+            <button type="submit" class="reg-btn" onclick="registered()">
+              Register
+            </button>
+            <p class="message" id="message"></p>
+            <div class="login-link">
+              <p>have an account?</p>
+              <a onclick="login()">Login</a>
+            </div>
+          </form1>
+        </div>
+
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info and
+              play a simple game
+            </p>
+            <button class="ghost" id="signIn" onclick="logIn()">Login</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp" onclick="ovReg()">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="logreg.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+      
+    <title>Image Slider</title>
+  </head>
+  <body>
+    <div class="bar"><i class="fa-solid fa-bars"></i></div>
+
+    <nav class="nav">
+      <i class="fa-solid fa-xmark" id="close-nav"></i>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li class="hover">
+         <a> My Projects</a>
+          <ul class="dropdown object-none">
+            <li><a href="game.html">Game</a></li>
+            <li><a href="slider.html">Image-slider</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="circle.html">Animation</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+    </nav>
+    
+    
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <img src="image/bird1.jpg" alt="প্রকৃতির ছবি ১" />
+          </div>
+          <div class="slide">
+            <img src="image/bird2.jpg" alt="প্রকৃতির ছবি ২" />
+          </div>
+          <div class="slide">
+            <img src="image/bird3.jpg" alt="প্রকৃতির ছবি ৩" />
+          </div>
+          <div class="slide">
+            <img src="image/bird4.jpg" alt="প্রকৃতির ছবি ৪" />
+          </div>
+        </div>
+
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <button class="slider-btn next-btn">&#10095;</button>
+        <div class="dots-container"></div>
+      </div>
+      
+        <div class="banner">
+          <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1">
+              <img src="image/bird1.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 2">
+              <img src="image/bird2.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 3">
+              <img src="image/bird3.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 4">
+              <img src="image/bird4.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 5">
+              <img src="image/bird5.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 6">
+              <img src="image/bird6.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 7">
+              <img src="image/bird7.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 8">
+              <img src="image/bird8.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 9">
+              <img src="image/bird9.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 10">
+              <img src="image/bird10.jpg" alt="" />
+            </div>
+          </div>
+
+         
+        </div>
+      
+    </div>
+    <script src="slider.js"></script>
+
+    
+  </body>
+</html>

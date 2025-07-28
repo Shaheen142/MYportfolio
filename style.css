@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.bar {
+  display: none;
+}
+
+nav #close-nav {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+
+  height: 50px;
+  width: 100%;
+  background: rgba(3, 49, 14, 0.5);
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+nav ul li {
+  margin: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #2e5ddd;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dropdown {
+  display: none;
+}
+
+/* স্লাইডারের মূল কন্টেইনার */
+.slider-container {
+  position: relative; /* বাটনগুলোকে এর ভেতরে রাখার জন্য */
+  width: 100vw; /* ছোট স্ক্রিনের জন্য */
+  height: 100vh; /* পুরো উচ্চতা */
+  overflow: hidden; /* বাইরের স্লাইডগুলো হাইড করার জন্য */
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* স্লাইড র‍্যাপার যা স্লাইডগুলোকে ধরে রাখবে এবং সরবে */
+.slider-wrapper {
+  display: flex; /* স্লাইডগুলোকে পাশাপাশি রাখার জন্য */
+  width: 100%;
+  height: 100%;
+  /* অ্যানিমেশন স্মুথ করার জন্য ট্রানজিশন */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* প্রতিটি স্লাইড */
+.slide {
+  flex: 0 0 100%; /* প্রতিটি স্লাইড কন্টেইনারের ১০০% জায়গা নিবে */
+  width: 100%; /* স্লাইডের প্রস্থ ১০০% হবে */
+  height: 100%; /* স্লাইডের উচ্চতা ১০০% হবে */
+  position: relative; /* বাটনগুলোকে স্লাইডের মধ্যে রাখতে */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%; /* ছবির উচ্চতা ১০০% হবে */
+  display: block; /* ছবি ব্লক এলিমেন্ট হিসেবে দেখাবে */
+  object-fit: cover; /* ছবিকে স্লাইডের মধ্যে সুন্দরভাবে ফিট করার জন্য */
+}
+
+/* নেভিগেশন বাটন স্টাইল */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* ইন্ডিকেটর ডট-এর কন্টেইনার */
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+/* প্রতিটি ডট */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* অ্যাক্টিভ ডটের স্টাইল */
+.dot.active {
+  background-color: white;
+}
+
+/* adding circle.css */
+.banner {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background: url(https://th.bing.com/th/id/R.8d10c6efa90ca9216af9ab91b3ebc279?rik=A24oNylZXBDKqg&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f202396-space-stars-nebula-Carina_Nebula.jpg&ehk=6stdwNzy6FHZtXtLA%2bIhnorN3Z5zUPdUJ8nxeSnGnnw%3d&risl=1&pid=ImgRaw&r=0)
+    no-repeat;
+  background-size: cover;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  animation-play-state: running;
+}
+.banner .slider:hover {
+  animation-play-state: running;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  border-radius: 20px;
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(400px);
+}
+
+.banner .slider .item img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#anibtn {
+  height: 50px;
+  width: 160px;
+  z-index: 2;
+  position: absolute;
+  bottom: 80px;
+  left: calc(55% - 160px);
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: large;
+  font-weight: 700;
+  color: #e0e4f0;
+  border-radius: 10px;
+  backdrop-filter: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.banner #anibtn:nth-child(2) {
+  height: 50px;
+  width: 160px;
+  z-index: 2;
+  position: absolute;
+  bottom: 80px;
+  left: calc(55% - 160px);
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: large;
+  font-weight: 700;
+  color: #e0e4f0;
+  border-radius: 10px;
+  backdrop-filter: 5px;
+  transform: translateY(-60px);
+}
+
+.banner #anibtn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  .banner,
+  .slider-container {
+    height: 50vh;
+  }
+  .banner .slider {
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 100px;
+    height: 150px;
+    top: 5%;
+    left: calc(50% - 75px);
+    animation: autoRun 15s linear infinite;
+    animation-play-state: paused;
+  }
+
+  .banner .slider:hover {
+    animation-play-state: running;
+  }
+
+  .banner .slider .item {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(200px);
+  }
+  .banner .slider .item img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  nav {
+    height: 100vh;
+    width: 0px;
+    overflow: hidden;
+    background: linear-gradient(180deg, seagreen, yellowgreen, blanchedalmond);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s linear;
+    z-index: 2;
+  }
+  nav #close-nav {
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 30px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 30px;
+  }
+  nav #close-nav:hover {
+    color: #2e5ddd;
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul {
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    overflow: hidden;
+    background-color: linear-gradient(
+      180deg,
+      seagreen,
+      yellowgreen,
+      blanchedalmond
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px;
+    justify-content: flex-start;
+  }
+  nav ul li {
+    height: 80px;
+    width: 250px;
+    margin-top: 10px;
+    margin-right: 20px;
+    text-align: end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease-in-out;
+    box-shadow: #0f111081 0 1px 0 0;
+  }
+
+  nav ul li a {
+    height: 80px;
+    width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: end;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    width: 250px;
+    height: 0;
+    background-color: transparent;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+    transition: all 0.3s linear;
+    z-index: 1000;
+  }
+
+  .hover:hover .dropdown {
+    height: 330px;
+
+    transition: all o.3s linear;
+  }
+  .bar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+  }
+}

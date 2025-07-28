@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+* {
+  margin: 0px;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.log-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("image/bird10.jpg") no-repeat;
+  background-size: cover;
+}
+.author {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-size: 6vw;
+  background: transparent;
+}
+.bar {
+  display: none;
+}
+
+nav #close-nav {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  gap: 40px;
+  background: transparent;
+  z-index: 1;
+}
+
+nav ul li {
+  margin: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #2e5ddd;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dropdown {
+  display: none;
+}
+
+.log-register {
+  position: absolute;
+  top: 20%;
+  height: 360px;
+  width: 300px;
+  border: 1px solid rgba(15, 13, 13, 0.5);
+  box-shadow: 10px 10px 10px 10px #212b257e;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  overflow: hidden;
+  transform: scale(0);
+  transition: all 1s ease, transform 0.5s ease;
+}
+
+.log-register span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+}
+.log-register h1 {
+  text-align: center;
+}
+
+.log-register form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 1s ease;
+}
+.log-register form1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.log-register form1 {
+  position: absolute;
+  transform: translateX(320px);
+}
+
+.input-box {
+  height: 40px;
+  width: 100%;
+  margin: 15px;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+
+  box-shadow: 0px 2px 2px 2px #212b257e;
+  border-radius: 5px;
+  background: transparent;
+
+  font-size: 18px;
+  color: black;
+}
+
+button {
+  text-align: center;
+  height: 40px;
+  width: 90px;
+  font-size: 18px;
+  color: black;
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px #212b257e;
+  border-radius: 5px;
+  margin: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.register-link {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  color: #212b25;
+  cursor: pointer;
+}
+
+.login-link {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #212b25;
+  cursor: pointer;
+}
+
+.overlay {
+  margin-top: 20%;
+  height: 360px;
+  width: 300px;
+  transition: all 0.7s ease;
+  transform: translateX(-70px);
+}
+@media screen and (max-width: 480px) {
+  button {
+    height: 50px;
+    width: 80%;
+    font-size: 16px;
+    margin: 15px auto;
+  }
+  .log-register h1 {
+    font-size: 24px;
+  }
+
+  .overlay {
+    transition: translateY(320px);
+    transform: translateX(0);
+  }
+  nav {
+    height: 100vh;
+    width: 0px;
+    overflow: hidden;
+    background: #eef3f0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.4s linear;
+    z-index: 2;
+    background: linear-gradient(120deg, red, blue);
+  }
+  nav #close-nav {
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 30px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 30px;
+  }
+  nav #close-nav:hover {
+    color: #2e5ddd;
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul {
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    overflow: hidden;
+    background-color: #f4f8f6;
+    position: relative;
+    top: 20px;
+    right: 0;
+    padding: 0px;
+    justify-content: flex-start;
+    background: transparent;
+  }
+  nav ul li {
+    height: 50px;
+    width: 250px;
+    margin-top: 0;
+    margin-right: 20px;
+    text-align: end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 0 #0f111081;
+  }
+
+  nav ul li a {
+    height: 50px;
+    width: 250px;
+
+    margin-right: 20px;
+    text-align: end;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    width: 250px;
+    height: 0;
+    background-color: #f4f8f6;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+    transition: all 0.3s linear;
+    z-index: 1000;
+  }
+
+  .hover:hover .dropdown {
+    height: 330px;
+
+    transition: all o.3s linear;
+  }
+  .bar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .bar span {
+    display: block;
+    width: 60;
+    height: 70px;
+    font-size: 50px;
+    background-color: black;
+    margin: 5px 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .banner {
+    width: 100vw;
+    height: 100vh;
+  }
+}

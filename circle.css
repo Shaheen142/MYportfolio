@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+.author {
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-size: 6vw;
+  background: transparent;
+  color: #5d77eb;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+a {
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  color: #5d77eb;
+  font-size: 2rem;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background: url(https://th.bing.com/th/id/R.8d10c6efa90ca9216af9ab91b3ebc279?rik=A24oNylZXBDKqg&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f202396-space-stars-nebula-Carina_Nebula.jpg&ehk=6stdwNzy6FHZtXtLA%2bIhnorN3Z5zUPdUJ8nxeSnGnnw%3d&risl=1&pid=ImgRaw&r=0)
+    no-repeat;
+  background-size: cover;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  border-radius: 20px;
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(400px);
+}
+
+.banner .slider .item img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  height: 50px;
+  width: 160px;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  left: calc(50% - 160px);
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: large;
+  font-weight: 700;
+  color: #e0e4f0;
+  border-radius: 10px;
+  backdrop-filter: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.banner button:nth-child(2) {
+  height: 50px;
+  width: 160px;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  left: calc(50% - 160px);
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+  font-size: large;
+  font-weight: 700;
+  color: #e0e4f0;
+  border-radius: 10px;
+  backdrop-filter: 5px;
+  transform: translateY(-60px);
+}
+
+.banner button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 600px) {
+  .banner .slider {
+    margin-top: 200px;
+    margin-left: 20px;
+    width: 100px;
+    height: 150px;
+    top: 5%;
+    left: calc(50% - 75px);
+    animation: autoRun 15s linear infinite;
+    animation-play-state: paused;
+  }
+
+  .banner .slider:hover {
+    animation-play-state: running;
+  }
+
+  .banner .slider .item {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(200px);
+  }
+  .banner .slider .item img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  button {
+    height: 50px;
+    width: 160px;
+    z-index: 2;
+    position: absolute;
+    bottom: 80px;
+    left: calc(70% - 160px);
+    background: transparent;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: large;
+    font-weight: 700;
+    color: #e0e4f0;
+    border-radius: 10px;
+    backdrop-filter: 5px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .banner button:nth-child(2) {
+    height: 50px;
+    width: 160px;
+    z-index: 2;
+    position: absolute;
+    bottom: 100px;
+    left: calc(70% - 160px);
+    background: transparent;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    font-size: large;
+    font-weight: 700;
+    color: #e0e4f0;
+    border-radius: 10px;
+    backdrop-filter: 5px;
+    transform: translateY(-60px);
+  }
+  .banner button:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease-in-out;
+  }
+}

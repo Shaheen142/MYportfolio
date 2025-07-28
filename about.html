@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" />
+    <title>About</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="bar" onclick="openBtn()"><i class="fa-solid fa-bars"></i></div>
+    <div class="author">FALCDEV</div>
+    <ul class="close-nav">
+      <div class="close-btn" onclick="closeBtn()">
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="hover">
+        <a class="hide">My Projects</a>
+        <ul class="dropdown">
+          <li><a href="game.html">Game</a></li>
+          <li><a href="">Calculator</a></li>
+          <li><a href="circle.html">Animations</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="hero-sec">
+      <div class="hed-img">
+        <div class="image-border">
+          <img src="image/shaheenport.jpg" alt="" />
+        </div>
+
+        <div class="content">
+          <div class="me">
+            <h2>
+              <span>Hi, I'm Shaheen</span><br />
+              A Passionate Web Developer
+            </h2>
+          </div>
+          <div class="get">
+            <p>I can help your business to</p>
+
+            <h2>Get online and<br /><span>grow fast</span></h2>
+          </div>
+
+          <div class="buttons">
+            <button type="button" onclick="window.location.href=''">
+              Resume
+            </button>
+            <button type="button" onclick="window.location.href='project.html'">
+              projects
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <h1>About Me</h1>
+        <div class="greeting">
+          <h4>Hello, My name is Shaheen</h4>
+          <p class="tagline">
+            A web developer with a passion for creating beautiful and functional
+            websites.
+          </p>
+        </div>
+
+        <div class="details">
+          <p class="skills">
+            I have experience working with <code>HTML</code>, <code>CSS</code>,
+            <code>JavaScript</code>, and <code>React</code>, and I'm always
+            eager to learn new technologies.
+          </p>
+          <p>
+            In my free time, I enjoy contributing to open-source projects and
+            exploring the latest web development trends.
+          </p>
+        </div>
+
+        <div class="call-to-action">
+          <p class="opportunity">
+            I'm currently seeking new opportunities to collaborate with other
+            developers and build amazing web experiences.
+          </p>
+          <a href="contact.html" class="contact-button">
+            If you're interested in learning more about my work, please feel
+            free to contact me.
+          </a>
+        </div>
+
+        <div class="logo-container">
+          <div class="logo-html"><i class="fa-brands fa-html5"></i></div>
+
+          <div class="logo-css"><i class="fa-brands fa-css3"></i></div>
+
+          <div class="logo-js"><i class="fa-brands fa-js"></i></div>
+
+          <div class="logo-react"><i class="fa-brands fa-react"></i></div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Copyright Your Website 2025</p>
+        <ul class="footer">
+          <li><a>Privacy</a></li>
+          <li><a>Terms</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="about.js"></script>
+  </body>
+</html>
