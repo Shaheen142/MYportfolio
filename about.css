@@ -21,6 +21,7 @@ body {
   list-style: none;
   gap: 30px;
   background: transparent;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
@@ -192,7 +193,7 @@ button:hover {
   margin-top: 70px;
 }
 
-.about h1 {
+.about h2 {
   margin: 40px;
   background: linear-gradient(to right, blue, red);
   -webkit-background-clip: text;
