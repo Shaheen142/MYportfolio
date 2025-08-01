@@ -18,6 +18,10 @@ body {
   justify-content: center;
 }
 
+.prj-body{
+  background: black;
+}
+
 .close-nav {
   height: 60px;
   width: 100%;
@@ -227,13 +231,63 @@ button:hover {
   margin: 30px;
   word-wrap: wrap;
   padding: 20px;
-
+  position: relative;
   gap: 30px;
 
   border-radius: 10px;
   box-shadow: 6px 6px 6px 6px #431116d9;
 
   color: white;
+}
+
+.projects::after, .projects::before{
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    left: -4px;
+    bottom: -4px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px 6px #431116d9;
+    background: conic-gradient(from var(--angle), #d11149, #e68aff, #ff4800, #11ebff, #d11149);
+    z-index: -1;
+}
+
+.projects::before{
+    z-index: -2;
+    filter: blur(20px);
+    opacity: 0.9;
+}
+
+.projects:hover::after{
+    animation: glowing-border 3.5s linear infinite;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes glowing-border{
+    from{
+        --angle: 0deg;
+    } to{
+        --angle: 360deg;
+    }
+}
+
+.projects:hover::before{
+    animation: blur-effect 3.5s linear infinite, glowing-border 3.5s linear infinite;
+    
+}
+
+@keyframes blur-effect{
+    from{
+        filter: blur(20px);
+    } to{
+       filter: blur(19px); 
+    }
 }
 
 .projects h2,
