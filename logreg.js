@@ -210,7 +210,7 @@ function register() {
 }
 
 function clsbtn() {
-  logRegister.style.transform = "scale(0)";
+  logRegister.style.display = "block";
   form.style.transform = "translateX(0px)";
   form1.style.transform = "translateX(320px)";
   logRegister.style.height = "360px";
@@ -221,7 +221,7 @@ function clsbtn() {
 }
 
 function ovReg() {
-  overLay.style.transform = "translateX(320px)";
+  overLay.style.display = "none";
   logRegister.style.transform = "scale(1)";
   form.style.transform = "translateX(-320px)";
   form1.style.transform = "translateX(0px)";
@@ -251,3 +251,4 @@ window.onscroll = function () {
 };
 
 /*game.js additions*/
+
