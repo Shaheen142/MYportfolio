@@ -216,10 +216,12 @@ button:hover {
 }
 
 .overlay {
+  position: relative;
   margin-top: 20%;
   height: 360px;
   width: 300px;
-  transition: all 0.7s ease;
+  transform-origin: left;
+  transition: all 0.4s ease;
   transform: translateX(-70px);
 }
 @media screen and (max-width: 480px) {

@@ -164,7 +164,8 @@ function logregister() {
     form1.style.transform = "translateX(320px)";
     logRegister.style.height = "360px";
   } else if (window.matchMedia("(max-width: 420px)").matches) {
-    overLay.style.width = "0";
+    overLay.style.transform = "translateX(0)";
+    overLay.style.transform = "scaleX(0)";
     nav.style.width = "0px";
     navUl.style.width = "0px";
   }
@@ -182,7 +183,8 @@ function logIn() {
     form1.style.transform = "translateX(320px)";
     logRegister.style.height = "360px";
   } else if (window.matchMedia("(max-width: 420px)").matches) {
-    overLay.style.width = "0";
+    overLay.style.transform = "translateX(0)";
+    overLay.style.transform = "scaleX(0)";
   }
 }
 
@@ -193,7 +195,8 @@ function login() {
   document.getElementById("l-username").value = "";
   document.getElementById("l-password").value = "";
   if (window.matchMedia("(max-width: 420px)").matches) {
-    overLay.style.width = "0";
+    overLay.style.transform = "translateX(0)";
+    overLay.style.transform = "scaleX(0)";
   }
 }
 
@@ -205,12 +208,12 @@ function register() {
   document.getElementById("r-password").value = "";
 
   if (window.matchMedia("(max-width: 420px)").matches) {
-    overLay.style.width = "0";
+    overLay.style.transform = "scaleX(0)";
   }
 }
 
 function clsbtn() {
-  logRegister.style.display = "block";
+  logRegister.style.transform = "scale(0)";
   form.style.transform = "translateX(0px)";
   form1.style.transform = "translateX(320px)";
   logRegister.style.height = "360px";
@@ -218,10 +221,14 @@ function clsbtn() {
   overLay.style.width = "300px";
   document.getElementById("l-username").value = "";
   document.getElementById("l-password").value = "";
+
+  if (window.matchMedia("(max-width: 420px)").matches) {
+    overLay.style.transform = "scaleX(1)";
+  }
 }
 
 function ovReg() {
-  overLay.style.display = "none";
+  overLay.style.transform = "traslateX(320px)";
   logRegister.style.transform = "scale(1)";
   form.style.transform = "translateX(-320px)";
   form1.style.transform = "translateX(0px)";
@@ -230,7 +237,7 @@ function ovReg() {
   document.getElementById("r-password").value = "";
 
   if (window.matchMedia("(max-width: 420px)").matches) {
-    overLay.style.width = "0";
+    overLay.style.transform = "scaleX(0)";
   }
 }
 
@@ -251,4 +258,3 @@ window.onscroll = function () {
 };
 
 /*game.js additions*/
-
