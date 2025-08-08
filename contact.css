@@ -235,7 +235,7 @@ button:hover {
   gap: 30px;
 
   border-radius: 10px;
-  box-shadow: 6px 6px 6px 6px #431116d9;
+  
 
   color: white;
 }
@@ -446,3 +446,4 @@ p {
     flex-direction: column;
   }
 }
+
