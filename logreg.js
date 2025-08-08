@@ -153,7 +153,7 @@ function loginS() {
 }
 
 function logregister() {
-  logRegister.style.transform = "scale(1)";
+  logRegister.style.transform = "scaleX(1)";
   overLay.style.transform = "translateX(320px)";
   document.getElementById("l-username").value = "";
   document.getElementById("l-password").value = "";
@@ -172,7 +172,7 @@ function logregister() {
 }
 
 function logIn() {
-  logRegister.style.transform = "scale(1)";
+  logRegister.style.transform = "scaleX(1)";
   overLay.style.transform = "translateX(320px)";
   document.getElementById("l-username").value = "";
   document.getElementById("l-password").value = "";
@@ -213,7 +213,7 @@ function register() {
 }
 
 function clsbtn() {
-  logRegister.style.transform = "scale(0)";
+  logRegister.style.transform = "scaleX(0)";
   form.style.transform = "translateX(0px)";
   form1.style.transform = "translateX(320px)";
   logRegister.style.height = "360px";
@@ -228,8 +228,8 @@ function clsbtn() {
 }
 
 function ovReg() {
-  overLay.style.transform = "traslateX(320px)";
-  logRegister.style.transform = "scale(1)";
+  overLay.style.transform = "translateX(320px)";
+  logRegister.style.transform = "scaleX(1)";
   form.style.transform = "translateX(-320px)";
   form1.style.transform = "translateX(0px)";
   logRegister.style.height = "400px";
@@ -258,4 +258,5 @@ window.onscroll = function () {
 };
 
 /*game.js additions*/
+
 
