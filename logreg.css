@@ -221,7 +221,7 @@ button:hover {
   margin-top: 20%;
   height: 360px;
   width: 300px;
-  transform-origin: left;
+  transform-origin: right;
   transition: all 0.4s ease;
   transform: translateX(-70px);
 }
