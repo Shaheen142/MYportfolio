@@ -232,6 +232,9 @@ button:hover {
     font-size: 16px;
     margin: 15px auto;
   }
+  .log-container{
+    background: url("image/Nature32115_rectangle_20250806_103229_882_2.jpg") no-repeat;
+  }
   .log-register h1 {
     font-size: 24px;
   }
