@@ -233,7 +233,8 @@ button:hover {
     margin: 15px auto;
   }
   .log-container{
-    background: url("image/Nature32115_rectangle_20250806_103229_882_2.jpg") no-repeat;
+    background: url("image/Minimalistic Nature32115_rectangle_20250806_103229_882_2.jpg") no-repeat;
+  background-size: cover;
   }
   .log-register h1 {
     font-size: 24px;
