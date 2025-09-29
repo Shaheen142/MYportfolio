@@ -226,7 +226,7 @@ button:hover {
   transform-origin: right;
   transition: all 0.4s ease;
   transform: translateX(-70px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(1px);
 }
 @media screen and (max-width: 480px) {
@@ -247,7 +247,7 @@ button:hover {
   .overlay {
     transition: translateY(320px);
     transform: translateX(0);
-     background: rgba(255, 255, 255);
+     background: rgba(255, 255, 255, 0.2);
   }
   nav {
     height: 100vh;
