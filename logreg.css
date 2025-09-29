@@ -23,7 +23,7 @@
   top: 80px;
   left: 80px;
   font-size: 6vw;
-  background: rgba(255, 255, 255, 0.5);
+  
 }
 .bar {
   display: none;
@@ -226,7 +226,8 @@ button:hover {
   transform-origin: right;
   transition: all 0.4s ease;
   transform: translateX(-70px);
-  background: rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(1px);
 }
 @media screen and (max-width: 480px) {
   button {
