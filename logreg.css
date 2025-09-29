@@ -5,7 +5,7 @@
   padding: 0;
   list-style-type: none;
   box-sizing: border-box;
-  color: #e61077;
+  color: black;
 }
 
 .log-container {
@@ -23,7 +23,7 @@
   top: 80px;
   left: 80px;
   font-size: 6vw;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
 }
 .bar {
   display: none;
@@ -157,7 +157,7 @@ input {
   outline: none;
   border: none;
 
-  box-shadow: 0px 2px 2px 2px #212b257e;
+  box-shadow: 0px 2px 2px 2px black;
   border-radius: 5px;
   background: transparent;
 
@@ -173,14 +173,14 @@ button {
   color: black;
   background: transparent;
   border: none;
-  box-shadow: 2px 2px 2px 2px #e61077;
+  box-shadow: 2px 2px 2px black;
   border-radius: 5px;
   margin: 15px;
-  font-weight: 600;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   font-family: "Courier New", Courier, monospace;
-  color: #e61077;
+  color: black;
 }
 button:hover {
   cursor: pointer;
