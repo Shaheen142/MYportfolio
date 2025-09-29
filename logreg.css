@@ -219,8 +219,14 @@ button:hover {
 }
 
 .overlay {
-  position: relative;
-  margin-top: 20%;
+ margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 5px;
   height: 360px;
   width: 300px;
   transform-origin: right;
