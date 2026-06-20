@@ -268,7 +268,7 @@ button:hover {
     right: 0;
     transition: all 0.4s linear;
     z-index: 2;
-    background: #CB87B;
+    background: #9CB87B;
     border-radius: 10px 0 0 10px;
   }
   nav #close-nav {
@@ -287,7 +287,7 @@ button:hover {
     transition: all 0.3s ease-in-out;
   }
   nav ul {
-    display: none;
+
     flex-direction: column;
     height: 100vh;
     width: 0;
