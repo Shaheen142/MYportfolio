@@ -260,15 +260,15 @@ button:hover {
   }
   nav {
     height: 100vh;
-    width: 0px;
+    width: 250px;
     overflow: hidden;
-    background: #eef3f0;
     position: absolute;
     top: 0;
     right: 0;
     transition: all 0.4s linear;
     z-index: 2;
-    background: linear-gradient(120deg, red, blue);
+    background: #CB87B;
+    border-radius: 10px 0 0 10px;
   }
   nav #close-nav {
     display: block;
@@ -290,8 +290,7 @@ button:hover {
     height: 100vh;
     width: 250px;
     overflow: hidden;
-    background-color: #f4f8f6;
-    position: relative;
+   position: relative;
     top: 20px;
     right: 0;
     padding: 0px;
@@ -302,12 +301,13 @@ button:hover {
     height: 50px;
     width: 250px;
     margin-top: 0;
-    margin-right: 20px;
+    margin-right: 30px;
     text-align: end;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    font-weight: 600;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 1px 0 #0f111081;
+    box-shadow: 0 2px 0 #0f111081;
   }
 
   nav ul li a {
@@ -317,7 +317,7 @@ button:hover {
     margin-right: 20px;
     text-align: end;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 40px;
     font-family: "Courier New", Courier, monospace;
     color: black;
     font-size: 20px;
