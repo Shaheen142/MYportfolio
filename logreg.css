@@ -259,9 +259,9 @@ button:hover {
      background: rgba(255, 255, 255, 0.2);
   }
   nav {
-    display: none;
+    
     height: 100vh;
-    width: 250px;
+    width: 0;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -290,7 +290,7 @@ button:hover {
     display: none;
     flex-direction: column;
     height: 100vh;
-    width: 250px;
+    width: 0;
     overflow: hidden;
    position: relative;
     top: 20px;
